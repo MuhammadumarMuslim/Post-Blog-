@@ -1,0 +1,39 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+h2{
+    text-align:center;
+    margin:20px;
+    font-size:40px;
+}
+a{
+    text-decoration:none;
+
+}
+p{
+
+}
+header h1 a{
+    text-decoration:none;
+    margin: 50px;
+    font-size:50px;
+    color:orange
+
+}
+header h1{
+    text-align:center;
+    background-color:black;
+}
+#menu{
+    margin:10px;
+    border-bottom:5px solid red;
+}
+
+.post-entry{
+    border-top:3px solid red;
+    width:600px;
+    margin:30px;
+    padding:20px;
+}

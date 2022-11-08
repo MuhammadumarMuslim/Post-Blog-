@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ummat Uchun Blog</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <header>
+        <div id="menu">
+            <h1><a href="{% url 'home' %}">Ummat Uchun </a> </h1>
+        </div>
+
+    </header>
+    <div style="width:250px;border:1px solid orange;margin-left:10px; background:orange;">
+        {% if user.is_authenticated %}
+        <p style="font-size:25px; margin:20px;">Xush kelibsiz, {{user.username }}</p>
+        <p style="font-size:25px; margin:20px;">
+            <a href="{% url 'logout' %}">chiqib ketish</a>
+        </p>
+    {% else %}
+        <p style="font-size:25px; margin:20px;">
+            <a href="{% url 'login' %}">Saytga Kirish</a>
+        </p>
+    {% endif %}
+    </div>
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+<footer>
+    <div >
+        <h2 style="border:1px solid;width:320px;margin:0 auto;background:gray;font-size:40px; margin-bottom:100px;"><a href="{% url 'post_new' %}" style=" color:red;">Yangi Post Yozish</a> </h2>
+    </div>
+
+</footer>
+</body>
+</html>
